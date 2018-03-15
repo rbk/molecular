@@ -1,0 +1,42 @@
+aside {
+
+	.menu {
+
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+
+	    li {
+	        
+	        position: relative;
+	        
+	        i {
+	            position: absolute;
+	            right: 0;
+	            top: 0;
+	            display: inline-block;
+	            padding: 10px 15px 12px;
+	            
+	            &:hover {
+	                cursor: pointer;
+	            }
+	        }
+
+	        .sub-menu {
+	            list-style: none;
+	            padding-left: 0 !important;
+	            
+	            a {
+	                padding-left: 25px; 
+	            }
+
+	        }
+	    }
+
+	    a {
+	        padding: 5px 15px 5px 0;
+	        display: block;
+	    }
+	}
+
+}

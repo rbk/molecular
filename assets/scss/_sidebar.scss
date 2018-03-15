@@ -1,0 +1,36 @@
+/* 
+
+	sidebar widgets 
+
+*/
+aside {
+	
+	margin-bottom: 1em;
+
+	ul, p {
+		margin: 0;
+	}
+	
+	h2:first-child {
+		margin-top: 0;
+	}
+	
+	ul {
+		padding-left: 25px;
+	}
+}
+#secondary {
+
+	.widget_categories, 
+	.widget_archive, 
+	.widget_recent_comments,
+	.widget_meta,
+	.widget_recent_entries {
+	
+		ul {
+			padding-left: 25px;
+			@include clearfix;
+		}
+	
+	}
+}

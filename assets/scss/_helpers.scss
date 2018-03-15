@@ -1,0 +1,53 @@
+/*
+*
+* Helper Classes
+* Description: Some helper classes for Wordpress and other CSS related things
+*/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+@media only screen and ( max-width: $base-breakpoint ){
+	.desktop-only {
+		display: none;
+	}
+}
+@media only screen and ( min-width: $base-breakpoint ){
+	.mobile-only {
+		display: none;
+	}
+}
+
+#fb-root {
+    display: none;
+}
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+[hide], .hide {
+	display: none;
+	opacity: 0;
+}
+.centered {
+	float: none;
+	margin: 0 auto;
+}
+.text-align-center {
+	text-align: center;
+}
+.text-align-right {
+	text-align: right;
+}
+
+.table {
+	display: table;
+	width: 100%;
+}
+.table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}

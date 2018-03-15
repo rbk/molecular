@@ -1,0 +1,52 @@
+/* Table Style for in content and wp calendar */
+th, td {
+	border: 1px solid #E2E2E2;
+}
+table {
+	table-layout: fixed;
+	margin-bottom: 1em;
+	line-height: 1.5;
+	max-width: 100%;
+	td, th {
+		padding: 8px 16px;
+		font-weight: normal;
+	}
+	tr:nth-child(even) {
+	}
+	&:not(#wp-calendar){
+		thead {
+			th {
+				border: 0;
+			}
+		}
+	}
+	&#wp-calendar {
+		width: 100%;
+		th,td {
+			padding: 3px;
+			text-align: center;
+		}
+		td {
+			&.pad {
+			}
+		}
+		td#today {
+		}
+		caption {
+			font-weight: normal;
+			border: 1px solid #E2E2E2;
+			border-bottom: 0;
+			padding: 3px;
+		}
+		// td#prev {
+		// 	border-right: 0;
+		// }
+		// td.pad {
+		// 	border-right: 0;
+		// 	border-left: 0;
+		// }
+		// td#next {
+		// 	border-left: 0;
+		// }
+	}
+}

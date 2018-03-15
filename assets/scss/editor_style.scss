@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300,900|Source+Serif+Pro);
+
+$body-font: 'Source Serif Pro', serif;
+$heading-font: 'Roboto', sans-serif;
+
+body {
+	font-family: $body-font;
+	font-size: 18px;
+	color: #222
+}
+h1,h2,h3,h4,h5,h6{	
+	font-family: $heading-font;
+}

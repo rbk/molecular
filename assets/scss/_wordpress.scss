@@ -1,0 +1,50 @@
+@media only screen and (min-width: 768px){
+	.alignright { 
+		display: inline-block; 
+		float: right; 
+		margin: 0px 0 20px 20px;
+		@include clearfix();
+	}
+	.alignleft { 
+		display: inline-block; 
+		float: left; 
+		margin: 0px 20px 20px 0;
+		@include clearfix();
+	}
+	.aligncenter { 
+		margin: 0 auto; 
+		display: block;
+		float: none;
+	}
+}
+
+@media only screen and ( max-width: 767px ) {
+	.alignright,
+	.alignleft,
+	.aligncenter {
+		margin: 0 auto;
+		display: block;
+		margin: 0 auto 20px auto;
+		text-align: center;
+	}
+}
+
+.wp-caption-text {
+ margin:0;	
+}
+.sticky {
+ margin:0;
+}
+.gallery-caption {
+ margin:0;
+}
+.bypostauthor {
+ margin:0;
+}
+.wp-caption {
+	max-width: 100%;
+}
+.wp-caption-text {
+	font-family: $heading-font;
+    font-size: 14px;
+}

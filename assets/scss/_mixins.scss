@@ -1,0 +1,140 @@
+@mixin main-sprite($w:0,$h:0,$x:0,$y:0){
+  display: block;
+  background-image:url("../images/sprite.png");
+  background-repeat: no-repeat;
+  width: $w;
+  height: $h;
+  background-position: $x $y;
+  text-indent: -9999px;
+  
+}
+@mixin opacity($number: .5){
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $number*100 ")";
+    filter: alpha(opacity= $number*100 );
+    -moz-opacity: $number;
+    -khtml-opacity: $number;
+    opacity: $number;
+}
+
+//(2/3/15)  
+//===================================================================
+//======= Perfect Square
+//===================================================================
+@mixin sq($width) {
+  width: $width;
+  height: 0px;
+  padding-bottom: $width;
+}
+
+
+@mixin baseTransition(){
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+
+//(2/15/15) 
+//===================================================================
+//======= CSS3 Keyframes
+//===================================================================
+@mixin keyframes( $animation-name ) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+//(2/15/15) 
+//===================================================================
+//======= CSS3 Transition 
+//===================================================================
+@mixin transition( $args ) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+//(2/20/15) 
+//===================================================================
+//======= Crossbrowser Box Shadow
+//===================================================================
+@mixin box-shadow( $arg ){
+  -webkit-box-shadow: $arg;
+  -moz-box-shadow: $arg;
+  box-shadow: $arg;
+}
+
+
+@include keyframes (fadeIn) {
+  from { @include opacity(0); }
+  to { @include opacity(1); }
+}
+@include keyframes (infinite_scrolling_background_image) {
+  from {
+      background-position: 0% 0%;
+  }
+  to {
+    background-position: -100% -100%;
+
+  }
+}
+
+@include keyframes (slideDown) {
+    from { 
+        @include opacity(0);
+        height:0;
+    }
+    to { 
+        @include opacity(1);
+        height: auto;
+    }
+}
+
+
+
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+#masthead {
+  // @include animation( infinite_scrolling_background_image 5s infinite linear );
+}
+// @include animation ( fadeInQuick .5s cubic-bezier(0.65, 0.05, 0.36, 1));
+
+
+
+// @-webkit-keyframes moveLeft {
+//         0%   {background-position: 0 0;}
+//         100% {background-position: 20% 200%;}
+// }
+// #masthead {
+//         -webkit-animation-name: moveLeft;
+//         -webkit-animation-duration: 20s;
+//         -webkit-animation-timing-function: linear;
+//         -webkit-animation-delay: 0;
+//         -webkit-animation-iteration-count: infinite;
+//         -webkit-animation-direction: alternate;
+// }

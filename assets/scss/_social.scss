@@ -1,0 +1,28 @@
+.molecular_social {
+
+    height: 34px;
+    overflow: hidden;
+    
+    a {
+        text-align: center;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        line-height: 1;
+        color: $primary-color;
+        font-size: 20px;
+        padding-top: 11px;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            color: lighten($primary-color, 10%);
+        }
+
+        span {
+            text-indent: -999em;
+            display: block;
+            height:0;
+            width:0;
+        }
+    }
+}

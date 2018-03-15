@@ -1,0 +1,23 @@
+// Extend this class to make form buttons match
+.button:not(.search-submit), input[type-submit], #submit {
+	
+	// Basic
+	@include baseTransition();
+	border: 0;
+	display: inline-block;
+	padding: 12px 26px;
+	margin-bottom: 10px;
+	text-decoration: none !important;
+
+	// Custom
+	background-color: $primary-color;
+	font-family: $heading-font;
+	color: #fff;
+	font-size: 14px;
+	
+	&:hover {
+		background-color: lighten($primary-color, 10%);
+		color: #fff;
+	}
+
+}

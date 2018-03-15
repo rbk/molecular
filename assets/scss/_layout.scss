@@ -1,0 +1,40 @@
+// I'm using the wonderful Bootstrap Grid for most of the layout code.
+// Here are a few quick overrides and theme specific changes I needed.
+.wrap {
+	max-width: $layout-width;
+	padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+#main {
+	 margin-top: $spacing;
+}
+.container,
+.container-fluid {
+	max-width: $layout-width;
+	margin: 0 auto;
+	position: relative;
+}
+
+footer.entry-meta {
+	clear: both;
+}
+
+.molecular-footer {
+	padding: 5px;
+	font-size: 12px;
+	text-align: center;
+}
+
+#colophon {
+	margin-top: $spacing;
+	background-color: #eee;
+	.molecular_social {
+		margin-bottom: 5px;
+	}
+}
+
+.archive-header {
+	margin-bottom: $spacing;
+}

@@ -1,0 +1,160 @@
+#masthead {
+	padding: 3em 0;
+    background-color: $primary-color;
+    color: #fff;
+    position: relative;
+    a {
+    	color: #fff;
+    	&:hover, &:focus {
+    		text-decoration: none;
+    	}
+    }
+    background-repeat: repeat;
+    background-size: auto;
+
+    &.stretch {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
+}
+#masthead .search-form {
+    max-width: 320px;
+    right: 0;
+    top: 85px;
+    
+
+    input[type=search] {
+        background: none;
+        border:0;
+        border-bottom: 1px solid #fff;
+        color: #fff;
+        outline: 0;
+    }
+    ::-webkit-input-placeholder { color: #fff; } 
+    :-moz-placeholder { /* Firefox 18- */ color: #fff; } 
+    ::-moz-placeholder { /* Firefox 19+ */ color: #fff; } 
+    :-ms-input-placeholder { color: #fff; }
+
+}
+
+#masthead .search-form.focus {
+
+    ::-webkit-input-placeholder { color: transparent; } 
+    :-moz-placeholder { /* Firefox 18- */ color: transparent; } 
+    ::-moz-placeholder { /* Firefox 19+ */ color: transparent; } 
+    :-ms-input-placeholder { color: transparent; }
+
+}
+
+
+#site-title {
+    font-size: 3em;
+	line-height: 1;
+    margin-bottom: 0;
+	font-weight: bold;
+	margin-top: 0;
+}
+#site-description {
+	font-size: 1.3em;
+    margin-bottom: 0;
+}
+/* Set these as inline blocks so we can get the width with javascript */
+#site-description span,
+#site-title-link span {
+    display: inline-block;
+}
+#logo {
+    display: inline-block;
+    text-align: center;
+    @include transition(none);
+    span { font-size: 0; position: absolute; }
+}
+@media only screen and ( max-width: 768px ){
+    .site-branding {
+        text-align: center;
+    }
+    #site-description {
+        font-size: .9em;
+    }
+}
+@media only screen and ( min-width: 769px ){
+    .header-right {
+        position: relative;
+    }
+}
+@media only screen and ( max-width: 768px ){
+    #masthead {
+        padding: 2em 0;
+    }
+    #site-title {
+        font-size: 2.5em;
+    }
+}
+#search-icon {
+    display: none;
+    border: 1px solid #fff;
+    width: 50px;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    padding: 4px 8px;
+    height: 45px;
+
+    &:hover {
+        background-color: #FFF;
+        cursor: pointer;
+        #search-circle,
+        #search-line {
+            border-color: $primary-color;
+        }
+    }
+
+    #search-circle {
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+    }
+    #search-line {
+        position: absolute;
+        top: 29px;
+        left: 24px;
+        border-bottom: 1px solid #fff;
+        width: 16px;
+        transform: rotate(45deg);
+    }
+}
+body.mobile #masthead .search-form {
+    display: none;
+}
+
+@media only screen and (min-width: 768px){
+    
+    body:not(.mobile) {
+
+        .header-left-wrapper,
+        .header-right-wrapper {
+            display: table-cell;
+            width: 50%;
+            vertical-align: middle;
+        }
+        .header-right-wrapper {
+            text-align: right;
+        }
+        #small-navigation {
+            margin-bottom: 10px;
+        }
+        
+    }
+}
+body.mobile {
+    #logo,
+    #site-title-link,
+    #site-description {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
