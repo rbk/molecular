@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-8 col-sm-8">
+					<div class="col-md-8 col-sm-8 col-md-offset-2">
 						
 						<?php while ( have_posts() ) : the_post(); ?>
 

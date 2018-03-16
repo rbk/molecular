@@ -79,6 +79,7 @@ function molecular_enqueue_scripts() {
 		wp_enqueue_script( 'livereload', 'http://localhost:123456/livereload.js', array(), '20130115', false );
 	}
 	wp_enqueue_style( 'molecular-stylesheet', RBK_THEME_DIR . '/css/app.css', '', 1, 'all');
+	wp_enqueue_style( 'molecular-css-overrides', get_stylesheet_uri(), '', 1, 'all');
 	wp_enqueue_style( 'molecular-font-awesome', RBK_THEME_DIR . '/font-awesome-4.4.0/css/font-awesome.min.css', '', 4, 'all' );
 	wp_enqueue_script( 'molecular-production-js', RBK_THEME_DIR . '/js/build/production.min.js', array('jquery'), '20120206', true );
 
