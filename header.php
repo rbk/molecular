@@ -28,7 +28,6 @@
 	// Set any variables you may need in your javascript
 	var molecular_theme = {
 		base_url: "<?php echo esc_url( home_url( '/' ) ); ?>",
-		ajaxurl: "<?php echo admin_url('admin-ajax.php'); ?>",
 		center_logo: "<?php echo $center_logo_option; ?>",
 		logo: "<?php echo $logo; ?>",
 		mobile_logo: "<?php echo $mobile_logo; ?>",

@@ -14,7 +14,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 col-sm-12">
@@ -24,7 +23,6 @@ get_header(); ?>
 					</div>
 				</div>		
 			</div><!-- .container-fluid -->
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

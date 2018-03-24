@@ -139,16 +139,5 @@ include('theme_mods/main.php');
 include('includes/template-tags.php');
 include('includes/comments-template.php');
 
-function my_tweaked_admin_bar() {
-	global $wp_admin_bar;
-	//Do stuff
-	$arr = print_r( $wp_admin_bar->get_nodes(), true );
-	$fh = fopen(__DIR__ . '/log.txt', 'w+');
-	fwrite($fh, $arr);
-	fclose($fh);
-
-}
-add_action( 'wp_before_admin_bar_render', 'my_tweaked_admin_bar' );
-
 
 ?>
