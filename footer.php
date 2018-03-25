@@ -24,8 +24,8 @@
 	<div class="molecular-footer text-align-center">
 		<?php echo molecular_social(); ?>
 		<div>
-			Copyright <?php echo Date('Y'); ?>, <?php echo bloginfo('name'); ?>
-			<a target="_blank" href="//richardkeller.net">&nbsp; - Theme by Richard Keller</a>
+      <?php echo __("Copyright", "molecular"); ?> <?php echo Date('Y'); ?>, <?php echo bloginfo('name'); ?>
+<a target="_blank" href="//richardkeller.net">&nbsp; - <?php echo __("Theme by Richard Keller", "molecular"); ?></a>
 		</div>
 		<div class="clearfix"></div>
 	</div>
