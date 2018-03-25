@@ -56,7 +56,8 @@ add_action( 'customize_register', 'wp_molecular_customizer_register_social' );
  */
 function molecular_social() {
 
-	global $social_networks;
+  global $social_networks;
+  $html = "";
 	$network_count = 0;
 	$links = array();
 	foreach( $social_networks as $network ){
@@ -67,11 +68,12 @@ function molecular_social() {
 		}
 	}
 	if( $network_count >= 1 ){
-		echo '<div class="molecular_social">';
+		$html .= '<div class="molecular_social">';
 		foreach( $links as $network => $link ){
-			echo _x("<a target='_blank' class='social-icon fa fa-$network' href='$link'><span info='should add label'>/span></a>", 'molecular');
+			$html .= "<a target='_blank' class='social-icon fa fa-$network' href='$link'></a>";
 		}
-		echo '</div>';
+    $html .= '</div>';
+    echo $html;
 	}
 }
 function has_molecular_social( ){
