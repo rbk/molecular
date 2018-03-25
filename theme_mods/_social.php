@@ -18,7 +18,7 @@ $social_networks = array(
 function wp_molecular_customizer_register_social( $wp_customize ) {
 	global $social_networks;
 	$wp_customize->add_section('social', array(
-		'title' => 'Social Links',
+		'title' => __('Social Links', 'molecular'),
 		'description' => __('Link to your social networks here. Full url to your social network page required.', 'molecular'),
 		'priority' => 31
 	));
@@ -69,7 +69,7 @@ function molecular_social() {
 	if( $network_count >= 1 ){
 		echo '<div class="molecular_social">';
 		foreach( $links as $network => $link ){
-			echo '<a target="_blank" class="social-icon fa fa-'.$network.'" href="'.$link.'"><span info="should add label">/span></a>';
+			echo __('<a target="_blank" class="social-icon fa fa-'.$network.'" href="'.$link.'"><span info="should add label">/span></a>', 'molecular');
 		}
 		echo '</div>';
 	}

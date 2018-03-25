@@ -14,8 +14,8 @@ if( ! function_exists( 'molecular_posts_pagination' ) ) :
 			<?php
 				the_posts_pagination(array(
 					'mid_size' => 5,
-					'prev_text' => '<i class="fa fa-arrow-left"></i> Previous',
-					'next_text' => 'Next <i class="fa fa-arrow-right"></i>'
+					'prev_text' => '<i class="fa fa-arrow-left"></i> ' . __('Previous', 'molecular'),
+					'next_text' => __('Next', 'molecular') . '<i class="fa fa-arrow-right"></i>'
 				));
 			?>
 		</div>
@@ -40,10 +40,10 @@ function molecular_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'molecular' ); ?></h1>
+		<h1 class="screen-reader-text"><?php __( 'Post navigation', 'molecular' ); ?></h1>
 		<div class="post-nav-links">
-			<?php previous_post_link( '%link', _x( '<span class="meta-nav-left"><i class="fa fa-arrow-left"></i>%title</span> ', 'Previous post link', 'molecular' ) ); ?>
-			<?php next_post_link(     '%link', _x( ' <span class="meta-nav-right">%title<i class="fa fa-arrow-right"></i></span>', 'Next post link',     'molecular' ) ); ?>
+			<?php previous_post_link( '%link', __( '<span class="meta-nav-left"><i class="fa fa-arrow-left"></i>%title</span> ', 'Previous post link', 'molecular' ) ); ?>
+			<?php next_post_link(     '%link', __( ' <span class="meta-nav-right">%title<i class="fa fa-arrow-right"></i></span>', 'Next post link',     'molecular' ) ); ?>
 			<div class="clearfix"></div>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->

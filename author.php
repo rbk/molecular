@@ -23,7 +23,7 @@ get_header(); ?>
 						
 						<div class="author-template-list">
 							
-						<h1>Articles by <?php echo get_the_author(); ?></h1>
+            <h1><?php echo __('Articles by ' .  get_the_author(), 'molecular'); ?></h1>
 						<ul>
 							<?php while ( have_posts() ) : the_post(); ?>
 								<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
