@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-8 col-sm-8">
+					<div class="col-md-8 col-sm-8 <?php if (!dynamic_sidebar( 'sidebar' )):;?>col-md-offset-2<?php endif; ?>">
 						<?php while ( have_posts() ) : the_post(); ?>
 						<?php 
 
