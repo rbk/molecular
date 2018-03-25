@@ -42,8 +42,8 @@ function molecular_post_nav() {
 	<nav class="navigation post-navigation" role="navigation">
 		<h1 class="screen-reader-text"><?php __( 'Post navigation', 'molecular' ); ?></h1>
 		<div class="post-nav-links">
-			<?php previous_post_link( '%link', __( '<span class="meta-nav-left"><i class="fa fa-arrow-left"></i>%title</span> ', 'Previous post link', 'molecular' ) ); ?>
-			<?php next_post_link(     '%link', __( ' <span class="meta-nav-right">%title<i class="fa fa-arrow-right"></i></span>', 'Next post link',     'molecular' ) ); ?>
+			<?php previous_post_link( '%link', _x( '<span class="meta-nav-left"><i class="fa fa-arrow-left"></i>%title</span> ', 'Previous post link', 'molecular' ) ); ?>
+			<?php next_post_link(     '%link', _x( ' <span class="meta-nav-right">%title<i class="fa fa-arrow-right"></i></span>', 'Next post link',     'molecular' ) ); ?>
 			<div class="clearfix"></div>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -61,38 +61,4 @@ function molecular_posted_on() {
 	echo '<a href="'.$author_link.'">'.$author_name .'</a> &#10148 ' . get_the_date();
 }
 endif;
-
-/**
- * Returns true if a blog has more than 1 category.
- */
-function molecular_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'hide_empty' => 1,
-		) );
-
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count( $all_the_cool_cats );
-
-		set_transient( 'all_the_cool_cats', $all_the_cool_cats );
-	}
-
-	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so molecular_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so molecular_categorized_blog should return false.
-		return false;
-	}
-}
-
-/**
- * Flush out the transients used in molecular_categorized_blog.
- */
-function molecular_category_transient_flusher() {
-	// Like, beat it. Dig?
-	delete_transient( 'all_the_cool_cats' );
-}
-add_action( 'edit_category', 'molecular_category_transient_flusher' );
-add_action( 'save_post',     'molecular_category_transient_flusher' );
+?>

@@ -69,7 +69,7 @@ function molecular_social() {
 	if( $network_count >= 1 ){
 		echo '<div class="molecular_social">';
 		foreach( $links as $network => $link ){
-			echo __('<a target="_blank" class="social-icon fa fa-'.$network.'" href="'.$link.'"><span info="should add label">/span></a>', 'molecular');
+			echo _x("<a target='_blank' class='social-icon fa fa-$network' href='$link'><span info='should add label'>/span></a>", 'molecular');
 		}
 		echo '</div>';
 	}
