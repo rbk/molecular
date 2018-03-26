@@ -139,5 +139,4 @@ include('theme_mods/main.php');
 include('includes/template-tags.php');
 include('includes/comments-template.php');
 
-
 ?>
