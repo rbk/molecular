@@ -11,3 +11,8 @@ Text Domain: molecular
 Domain Path: /languages/
 Tags: two-columns, right-sidebar
 */
+
+pre {
+  background-color: #eee;
+  padding: 1rem 2rem;
+}
