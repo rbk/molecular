@@ -30,7 +30,9 @@ function molecular_theme_setup() {
 	add_theme_support( 'title-tag' ); // Allow plugins to manage the title tag - https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
 	add_theme_support( 'custom-header' ); // Custom Header Image - https://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Header
 	add_theme_support( 'automatic-feed-links' ); // https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
-	add_editor_style( RBK_THEME_DIR . '/css/editor_style.css' );
+  add_editor_style( RBK_THEME_DIR . '/css/editor_style.css' );
+  add_theme_support('post-formats', array('aside', 'gallery', 'link', 'video', 'quote', 'image', 'status', 'audio', 'chat'));
+  
 
 }
 add_action( 'after_setup_theme', 'molecular_theme_setup' );
@@ -138,5 +140,6 @@ include('includes/cool-php-functions.php');
 include('theme_mods/main.php');
 include('includes/template-tags.php');
 include('includes/comments-template.php');
+
 
 ?>
