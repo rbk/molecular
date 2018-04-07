@@ -16,3 +16,21 @@ pre {
   background-color: #eee;
   padding: 1rem 2rem;
 }
+
+.caps {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.font-small {
+  font-size: .9rem;
+}
+
+.read-more {
+  display: block;
+  margin-top: 1rem;
+}
+

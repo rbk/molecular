@@ -172,7 +172,7 @@ function molecular_theme_customizer_colors( ){
 			#submit:hover{
 				background-color: <?php echo $link_color_hover; ?>;
 				color: <?php echo $background_color; ?>;
-			}
+      }
 
 		<?php endif; ?>
 		/*Link Hover Color*/

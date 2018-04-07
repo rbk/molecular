@@ -27,9 +27,9 @@ function molecular_theme_setup() {
 
 	add_theme_support( 'custom-background', array()); 
 	add_theme_support( 'post-thumbnails' ); // Featured Images
-	add_theme_support( 'title-tag' ); // Allow plugins to manage the title tag - https://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
-	add_theme_support( 'custom-header' ); // Custom Header Image - https://codex.wordpress.org/Function_Reference/add_theme_support#Custom_Header
-	add_theme_support( 'automatic-feed-links' ); // https://codex.wordpress.org/Function_Reference/add_theme_support#Feed_Links
+	add_theme_support( 'title-tag' ); 
+	add_theme_support( 'custom-header' );
+  add_theme_support( 'automatic-feed-links' );   
   add_editor_style( RBK_THEME_DIR . '/css/editor_style.css' );
   add_theme_support('post-formats', array('aside', 'gallery', 'link', 'video', 'quote', 'image', 'status', 'audio', 'chat'));
   
@@ -112,7 +112,7 @@ add_filter('excerpt_length', 'new_excerpt_length');
  * @return string       What we want to replace the default more string with.
  */
 function new_excerpt_more( $more ) {
-	return '&hellip; <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'molecular' ) . '</a>';
+	return '&hellip; <a class="read-more caps italic font-small" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'molecular' ) . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 

@@ -15,6 +15,9 @@
 		<h2 class="entry-title">
 			<a href="<?php the_permalink() ?>">VIDEO:&nbsp<?php the_title(); ?></a>
 		</h2>
-	</header><!-- .entry-header -->
+  </header><!-- .entry-header -->
+	<div class="entry-meta">
+		<?php molecular_posted_on(); ?>
+	</div><!-- .entry-meta -->
   <?php the_content(); ?>
 </article>
